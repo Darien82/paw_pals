@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link href="../../stylesheets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../../stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/css/materialize.min.css"  media="screen,projection"/>
+  </head>
+
+  <!-- form data for editing -->
+   <div class="container center-align">
+    <form action="/users/<%= user._id %>?_method=PUT" method="POST">
+      <h1 class="#4db6ac teal-text lighten-2">User Profile</h1>
+
+        <div class="row">
+
+          <div class="input-field col s12">
+            <input placeholder="<%= user.name %>" name="name" id="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input placeholder="<%= user.zipCode %>" name="zipCode" id="zipCode" type="text" class="validate">
+            <label for="zipcode">Zipcode</label>
+          </div>
+
+          <div class="input-field col s6">
+            <input placeholder="<%= user.age %>" name="age" id="age" type="text" class="validate">
+            <label for="age">Age</label>
+          </div>
+
+          <h5>Your Bio</h5>
+
+          <div class="input-field col s12 left">
+            <textarea name="bio" id="textarea1" class="materialize-textarea" placeholder="<%= user.bio %>"></textarea>
+          </div>
+
+          <div class="input-field col s12">
+            <h5>Your Photo</h5>
+           <form method ="post" enctype="multipart/form-data" action="/public/upload" method="post">
+            <input type="file" name="file"><input type="submit" value="Upload Image" name="submit"></form>
+          
+
+
+            
+
+          <button class="btn waves-effect waves-light red accent-2 z-depth-2" type="submit" name="action">Submit</button>
+
+        </div>
+
+    </form>
+   </div>
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../../js/materialize.min.js"></script>
+  <script src="../../js/main.js"></script>
+  </body>
+</html>
