@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <title>PawPals</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    <link href="../stylesheets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="../stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/css/materialize.min.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+    <%- include ../partials/navbar %>
+
+<!-- Start of banner -->
+
+  
+
+  <div class="container center-align"> 
+    <h1>Puppy Page</h1> 
+
+    <div class="row">
+       
+        <div class="col s12">
+          <% puppies.forEach(function(puppy) { %>
+          <div class="card">
+            <div class="card-image">
+               <img class="activator" style="width:400px; height:400px" src="<%= puppy.url%>" alt="">
+              <span class="card-title"><%= puppy.name %></span>
+            </div>
+            <div class="card-content">
+              
+          </div>
+                <h5><a href="puppies/<%= puppy.id %>"><%= puppy.name %></a></h5>
+           
+            </div>
+            
+          </div>
+        <% }); %>
+        </div>
+      </div>
+    <%- include ../partials/feeter %>
+  </body>
+</html>
