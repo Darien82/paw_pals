@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../../stylesheets/css/register.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../../stylesheets/css/materialize.min.css"  media="screen,projection"/>
+  </head>
+
+  <body>
+    <%- include ../partials/navbar.ejs %>
+
+    <div class="container">
+      <h1 class="#4db6ac teal-text lighter-2">Your Profile</h1>
+    </div>
+
+
+    </div>
+
+    <div class="container">
+      <ul class="collection with-header">
+        <li class="collection-item"><p class="teal-text">Photo:</p><img src="<%= user.url %>" width="200px", height="auto"></li>
+        <li class="collection-item"><p class="teal-text">Name:</p> <%= user.name %></li>
+        <li class="collection-item"><p class="teal-text">Age:</p> <%= user.age %></li>
+        <li class="collection-item"><p class="teal-text">Zip Code:</p> <%= user.zipCode %></li>
+        <li class="collection-item"><p class="teal-text">Bio:</p> <%= user.bio %></li>
+      </ul>
+    </div>
+
+    <br>
+
+    <div class="container center">
+      <a class="waves-effect waves-light red btn" href="/users/<%= user.id %>/edit">Edit Profile</a>
+          <form method="POST" action="/users/<%= user._id %>?_method=DELETE">
+           <button class="btn waves-effect waves-light btn-sent red accent-2 z-depth-2 puppy-btn" type="submit" name="action">Delete Profile</button>
+         </form>
+    </div>
+
+    <!-- page seperator -->
+
+    <br></br>
+
+    <div class="container">
+      <hr></hr>
+    </div>
+
+    <!-- Puppy info -->
+
+    <div class="container">
+      <h1 class="#88cb82 green-text lighter-2">Your Puppies</h1>
+    </div>
+
+
+     <div class="row container">
+        <div class="col s12 m6">
+
+          <div class="card hoverable">
+            <div class="card-image">
+              <img src="/images/tree_sniff.gif">
+              <span class="card-title">Shadow</span>
+            </div>
+
+            <div class="card-content">
+              <p>Shadow is a very good boy</p>
+            </div>
+            <div class="card-action">
+              <a href="#">See Puppy Page</a>
+            </div>
+            <div class="card-action">
+              <a href='/puppies/:id/edit'>Edit Puppy Info</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <//% });%> -->
+
+      <div class="container center-align">
+        <a class="waves-effect waves-light red btn" href="/puppies/new">Add Puppy</a>
+      </div>
+
+
+    <!-- end of puppy stuff -->
+
+    <form action="/users/show/:id" method="GET" enctype="multipart/form-data">
+    </form>
+
+    <!-- footer -->
+    <%- include ../partials/feeter %>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="../../js/materialize.min.js"></script>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
