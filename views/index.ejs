@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>PawPals</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+  <link href="stylesheets/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="stylesheets/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="stylesheets/css/materialize.min.css"  media="screen,projection"/>
+</head>
+<body>
+
+  <div>
+    <%- include partials/nav %>
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Find your best friend!</h1>
+        <div class="row center">
+          <h5 class="header white-text col s12 light">PawPals allows dog lovers to find dogs in their area</h5>
+        </div>
+
+        <!-- Modal Trigger -->
+        <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+        <!-- Modal Structure -->
+        <div id="modal1" class="modal">
+          <div class="modal-content">
+            <h4>Modal Header</h4>
+            <p>A bunch of text</p>
+          </div>
+          <div class="modal-footer">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+          </div>
+        </div>
+        <div class="row center">
+          <a href="/auth/register" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Sign Up</a>
+        </div>
+        <div class="row center">
+          <a href="/login" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Login</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax">
+      <img src="/images/tree_sniff.gif" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%, 189px, 0px);">
+    </div>
+  </div>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="medium material-icons">SIGN UP</i></h2>
+            <h5 class="center white-text">Sign up in seconds</h5>
+
+            <p class="light white-text">Sign up and add your dogs to your profile. When someone see's your dog and wants to set up a playdate, they can simply message you by hitting the request button below your puppy's post.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="medium material-icons">SEARCH</i></h2>
+            <h5 class="center white-text">Search for other dogs</h5>
+
+            <p class="light white-text">Once you're signed up, you can use our puppy prowl search to find other dogs to play with. You can search by size, friendlisness, and proximity to your location. Once your search is in, we'll give you a list of dogs that match your requirements, any of which you can requst a playdate with.</p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center white-text"><i class="medium material-icons">MESSAGE</i></h2>
+            <h5 class="center white-text">Connect with other owners</h5>
+
+            <p class="light white-text">Once you receieve a request from a user to set up a playdate, enter into a secure chat between the two of you to coordinate the times and location of your playdate.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h2 class="header teal-text col s12 light">A run through the park. A splash at the beach. A romp in the snow.</h2>
+        </div>
+        <div class="row center">
+          <h5 class="header white-text col s12 light center-align">Set up playdates and let your dog socialize and get some exercise. You can meet anywhere you want.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax">
+      <img src="/images/treadmill.gif" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%, 199px, 0px);">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 row center">
+      <h2>Plan Your Playdates</h2>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s3"><br></br></div>
+    <div class="col s6 center">
+      <p>PawPals is here for you to meet other dog lovers and of course dogs.</p>
+    </div>
+     <div class="parallax">
+      <img src="/images/Cupcake_upclose.jpg" alt="Unsplashed background img 1" style="display: block; transform: translate3d(-50%, 189px, 0px);">
+    </div>
+
+  </div>
+
+  <%- include partials/feeter %>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="js/main.js"></script>
+
+  </body>
+</html>
