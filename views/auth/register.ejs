@@ -1,45 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <%- include ../partials/head %>
-<body>   
-<%- include ../partials/nav %>
- <!-- email -->
-<form action="/login" method="POST">
-  <div class="center align">
-    <h1 class="#88CB82 green-text lighter-2 center">Log In</h1>
-  <div class="row container center-align">
-    <div class="col s3"><br></br></div>
-      <div class="input-field col s6 center">
-        <input name="username" id="name" type="text" placeholder="email">
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="../stylesheets/css/register.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="../stylesheets/css/materialize.min.css"  media="screen,projection"/>
+  </head>
+  <body>
+    <%- include ../partials/nav %>
+    <div class="container center-align">
+      <h1 class="#88cb82 green-text lighten-2">User Profile</h1>
+
+      <% include ../partials/form %>
+
+      <div class="center align">
+        <h8>Already have an account? <a href="/login">Log in</a></h8>
       </div>
+
     </div>
-    <!-- password -->
-    <div class="row container center-align">
-      <div class="col s3"><br></br></div>
-        <div class="input-field col s6 center">
-          <input name="password" id="name" type="text" placeholder="password">
-        </div>
-      </div>
-        <button class="btn waves-effect waves-light btn-sent red accent-2 z-depth-2 btn-large" type="submit" name="action">Log In<i class="material-icons red lighten-2"></i></button>
-    </div>
-  </form>
-  <br></br>
-  <div class="container center-align">
-    <a class="waves-effect waves-light #5c6bc0 indigo lighten-1 btn-large" href="/auth/facebook">Log In with Facebook</a>
-    <a class="waves-effect waves-light #42a5f5 blue lighten-1 btn-large" href="/auth/twitter">Log In with Twitter</a>
-  </div>
-  <br></br>
-    <!-- sign up redirect -->
-    <div class="signup-action center-align">
-      <h8>Don't have an account?</h8>
-      <a href="auth/register">Signup</a>
-    </div>
-  </div>
-  <br></br>
-  <!-- footer -->
-  <%- include ../partials/feeter %>
-  <!-- js -->
-  <%- include ../partials/footer_js %>
- 
+
+    <!-- footer -->
+    <%- include ../partials/feeter %>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../js/materialize.js"></script>
+    <script type="text/javascript" src="../js/materialize.min.js"></script>
+    <script src="../js/pickdate.js"></script>
   </body>
 </html>
