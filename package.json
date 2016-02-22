@@ -1,0 +1,43 @@
+{
+  "name": "paw_pals",
+  "version": "1.0.0",
+  "description": "Find your paw pal",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "~1.13.2",
+    "bootstrap": "^3.3.5",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "dotenv": "^1.2.0",
+    "ejs": "~2.3.3",
+    "express": "~4.13.1",
+    "express-session": "^1.11.3",
+    "materialize-css": "^0.96.1",
+    "method-override": "^2.3.5",
+    "mongoose": "^4.1.2",
+    "morgan": "~1.6.1",
+    "multer": "^1.1.0",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.0.1",
+    "passport-twitter": "^1.0.3",
+    "serve-favicon": "~2.3.0",
+    "socket.io": "^1.3.6",
+    "sweetalert": "^1.1.0"
+    },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darien82/paw_pals.git"
+  },
+  "author": "Darien Curry",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darien82/paw_pals/issues"
+  },
+  "homepage": "https://github.com/Darien82/paw_pals#readme"
+}
